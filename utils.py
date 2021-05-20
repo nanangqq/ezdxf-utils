@@ -1,3 +1,9 @@
+import ezdxf
+import numpy as np
+import math
+import random
+from rtree import index
+
 def filterForms(ents, block_name):
     return [ent for ent in ents if 'block' in dir(ent) and ent.block().name==block_name]
 
